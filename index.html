@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafePath - Project Page</title>
+    <link rel="stylesheet" href="foundations.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: var(--space-5);
+            font-family: var(--font-family-sans);
+            background: var(--gradient-primary);
+        }
+        
+        .container {
+            max-width: var(--container-narrow);
+            padding: var(--space-15) var(--space-10);
+            border-radius: var(--radius-lg);
+            background: var(--color-surface);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(var(--space-5)); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--space-20);
+            height: var(--space-20);
+            margin: 0 auto var(--space-8);
+            border-radius: var(--radius-full);
+            background: var(--gradient-primary);
+            font-size: var(--text-5xl);
+        }
+        
+        h1 {
+            margin-bottom: var(--space-5);
+            color: var(--color-neutral-700);
+            font-size: var(--text-4xl);
+            font-weight: var(--font-bold);
+        }
+        
+        .subtitle {
+            color: var(--color-primary);
+            font-size: var(--text-xl);
+            margin-bottom: var(--space-8);
+            font-weight: var(--font-semibold);
+        }
+        
+        p {
+            color: var(--color-text-muted);
+            line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-5);
+            font-size: var(--text-lg);
+        }
+        
+        .highlight {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: var(--font-semibold);
+        }
+        
+        .info-box {
+            margin: var(--space-8) 0;
+            padding: var(--space-5);
+            border-left: var(--border-width-accent) solid var(--color-primary);
+            border-radius: var(--radius-md);
+            background: var(--color-surface-muted);
+            text-align: left;
+        }
+        
+        .info-box h3 {
+            margin-bottom: var(--space-4);
+            color: var(--color-neutral-700);
+            font-size: var(--text-xl);
+        }
+        
+        .info-box ul {
+            padding-left: var(--space-0);
+            list-style: none;
+        }
+        
+        .info-box li {
+            position: relative;
+            margin-bottom: var(--space-2);
+            padding-left: var(--space-8);
+            color: var(--color-text-muted);
+        }
+        
+        .info-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-size: var(--text-xl);
+            font-weight: var(--font-bold);
+        }
+        
+        .footer {
+            margin-top: var(--space-10);
+            padding-top: var(--space-8);
+            border-top: var(--border-width-medium) solid var(--color-border);
+            color: var(--color-text-subtle);
+            font-size: var(--text-sm);
+        }
+        
+        .url-box {
+            display: inline-block;
+            margin: var(--space-2) 0;
+            padding: var(--space-3) var(--space-5);
+            border-radius: var(--radius-md);
+            background: var(--color-neutral-100);
+            font-family: var(--font-family-mono);
+            font-weight: var(--font-semibold);
+            color: var(--color-primary);
+            word-break: break-all;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: var(--space-10) var(--space-5);
+            }
+            
+            h1 {
+                font-size: var(--text-3xl);
+            }
+            
+            .subtitle {
+                font-size: var(--text-base);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🚀</div>
+        
+        <h1>SafePath</h1>
+        <p class="subtitle">Your Project Landing Page</p>
+        
+        <p>
+            Welcome to your project's <span class="highlight">default landing page</span>! 
+            This is the beginning of something amazing.
+        </p>
+        
+        <p>
+            This page is hosted on <span class="highlight">GitHub Pages</span> and is ready to showcase 
+            your project to the world. As you develop your prototype, this page will evolve into 
+            your final product presentation.
+        </p>
+        
+        <div class="info-box">
+            <h3>📚 About This Repository</h3>
+            <ul>
+                <li>Use this repository to collaborate with your team</li>
+                <li>Commit your code and track changes using Git</li>
+                <li>Deploy your final prototype automatically with GitHub Pages</li>
+                <li>Share your progress with stakeholders</li>
+            </ul>
+        </div>
+        
+        <p>
+            Your project is accessible at:<br>
+            <span class="url-box">https://skill-in-projects.github.io/69b05faf21a2c28cc7919d1f/</span>
+        </p>
+        
+        <div class="info-box">
+            <h3>🎯 Next Steps</h3>
+            <ul>
+                <li>Clone this repository to your local machine</li>
+                <li>Start building your prototype</li>
+                <li>Push your changes to see them live instantly</li>
+                <li>Replace this page with your amazing end product!</li>
+            </ul>
+        </div>
+
+        <button id="testButton" onclick="testBackend()">Click Me</button>
+        <div id="response"></div>
+        
+        <div class="footer">
+            <p>
+                This page will be automatically replaced when you push your project files.<br>
+                <strong>Happy coding! 🎉</strong>
+            </p>
+        </div>
+    </div>
+    <script>
+        // Load config.js and ensure it's available
+        let configLoaded = false;
+        const configScript = document.createElement('script');
+        configScript.src = 'config.js';
+        configScript.onload = function() {
+            configLoaded = true;
+            console.log('✅ config.js loaded successfully');
+            console.log('📋 CONFIG:', typeof CONFIG !== 'undefined' ? CONFIG : 'CONFIG not defined');
+            console.log('📋 window.CONFIG:', typeof window !== 'undefined' && window.CONFIG ? window.CONFIG : 'window.CONFIG not defined');
+        };
+        configScript.onerror = function() {
+            console.error('❌ Failed to load config.js');
+            configLoaded = false;
+        };
+        document.head.appendChild(configScript);
+    </script>
+    <script>
+        // Debug: Log config on load
+        window.addEventListener('DOMContentLoaded', function() {
+            console.log('📋 Config loaded:', typeof CONFIG !== 'undefined' ? CONFIG : 'CONFIG not defined');
+            console.log('📋 window.CONFIG:', typeof window !== 'undefined' && window.CONFIG ? window.CONFIG : 'window.CONFIG not defined');
+            console.log('📋 API_URL from config:', typeof CONFIG !== 'undefined' ? CONFIG?.API_URL : (window.CONFIG?.API_URL || 'not found'));
+        });
+        
+        async function testBackend() {
+            const button = document.getElementById('testButton');
+            const responseDiv = document.getElementById('response');
+            
+            button.disabled = true;
+            button.textContent = 'Loading...';
+            responseDiv.className = '';
+            responseDiv.textContent = '';
+            
+            try {
+                // Wait a moment for config.js to load if it hasn't yet
+                if (!configLoaded) {
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                }
+                
+                // Try multiple ways to access CONFIG (handle scope issues)
+                let config = typeof CONFIG !== 'undefined' ? CONFIG : (typeof window !== 'undefined' && window.CONFIG ? window.CONFIG : null);
+                let apiUrl = config?.API_URL || '';
+                
+                console.log('🔍 CONFIG object:', config);
+                console.log('🔍 Original API_URL from config:', apiUrl);
+                console.log('🔍 typeof CONFIG:', typeof CONFIG);
+                console.log('🔍 window.CONFIG:', typeof window !== 'undefined' ? window.CONFIG : 'window not available');
+                console.log('🔍 configLoaded flag:', configLoaded);
+                
+                if (!apiUrl) {
+                    const errorMsg = 'API URL not configured in config.js. ' +
+                        'CONFIG object: ' + JSON.stringify(config) + 
+                        ', window.CONFIG: ' + JSON.stringify(typeof window !== 'undefined' ? window.CONFIG : 'N/A') +
+                        ', configLoaded: ' + configLoaded;
+                    throw new Error(errorMsg);
+                }
+                
+                // Ensure HTTPS for Railway domains (fix Mixed Content errors)
+                if (apiUrl.includes('railway.app')) {
+                    if (apiUrl.startsWith('http://')) {
+                        apiUrl = apiUrl.replace('http://', 'https://');
+                        console.warn('⚠️ Converted HTTP to HTTPS for Railway domain');
+                    }
+                    if (!apiUrl.startsWith('https://')) {
+                        apiUrl = 'https://' + apiUrl.replace(/^https?:\/\//, '');
+                        console.warn('⚠️ Added HTTPS protocol to Railway domain');
+                    }
+                }
+                
+                // Remove trailing slash from base URL if present
+                apiUrl = apiUrl.replace(/\/$/, '');
+                console.log('✅ Final API_URL (after normalization):', apiUrl);
+                
+                // Add trailing slash to prevent Railway redirect (Railway redirects /api/test to /api/test/)
+                // This prevents Railway from redirecting HTTPS to HTTP
+                const fullUrl = apiUrl + '/api/test/';
+                console.log('🌐 Attempting to fetch:', fullUrl);
+                console.log('🌐 Full URL type check:', typeof fullUrl, 'Starts with https?:', fullUrl.startsWith('https://'));
+                
+                // Check if URL is a Railway project URL (not a service URL)
+                if (apiUrl.includes('railway.app/project/')) {
+                    responseDiv.className = 'error';
+                    responseDiv.innerHTML = `
+                        <strong>❌ Configuration Error:</strong><br>
+                        <strong>The API URL is pointing to a Railway project page, not a service URL.</strong><br><br>
+                        <strong>Current URL:</strong> <code>${apiUrl}</code><br><br>
+                        <strong>Issue:</strong><br>
+                        Railway project pages (<code>railway.app/project/...</code>) are not API endpoints.<br>
+                        Your backend service needs to be deployed first to get a real API URL.<br><br>
+                        <strong>Solution:</strong><br>
+                        1. Deploy your backend code to Railway (push to GitHub and connect to Railway)<br>
+                        2. After deployment, Railway will generate a service URL like: <code>https://your-service-name.railway.app</code><br>
+                        3. Update <code>config.js</code> with the actual service URL<br>
+                        4. The service URL can be found in Railway dashboard: Service → Settings → Domains<br><br>
+                        <strong>Note:</strong> The backend code already includes CORS configuration, so once deployed with the correct URL, it will work.
+                    `;
+                    console.error('Invalid API URL (Railway project URL):', apiUrl);
+                    return;
+                }
+                
+                // Final validation - ensure URL is definitely HTTPS
+                if (!fullUrl.startsWith('https://')) {
+                    throw new Error('❌ CRITICAL: URL is not HTTPS! URL: ' + fullUrl);
+                }
+                
+                let response;
+                try {
+                    // Use fetch with explicit options
+                    console.log('📡 Making fetch request with explicit options...');
+                    console.log('📡 Full URL before fetch (stringified):', String(fullUrl));
+                    console.log('📡 Full URL type:', typeof fullUrl);
+                    console.log('📡 Full URL startsWith https?:', String(fullUrl).startsWith('https://'));
+                    
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+                    
+                    // Create URL object to ensure it's valid and has correct protocol
+                    const urlObj = new URL(fullUrl);
+                    console.log('📡 URL object protocol:', urlObj.protocol);
+                    console.log('📡 URL object href:', urlObj.href);
+                    
+                    // Force HTTPS protocol
+                    if (urlObj.protocol !== 'https:') {
+                        urlObj.protocol = 'https:';
+                        console.warn('⚠️ FORCED protocol to HTTPS:', urlObj.href);
+                    }
+                    
+                    const finalFetchUrl = urlObj.href;
+                    console.log('📡 Final fetch URL:', finalFetchUrl);
+                    
+                    response = await fetch(finalFetchUrl, {
+                        method: 'GET',
+                        mode: 'cors',
+                        credentials: 'omit',
+                        redirect: 'error', // Fail on redirect to catch HTTPS->HTTP redirects
+                        signal: controller.signal,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    clearTimeout(timeoutId);
+                    console.log('✅ Fetch completed, status:', response.status, 'Final URL:', response.url);
+                } catch (fetchError) {
+                    // Network error - check if it's a CORS error or connection error
+                    const isCorsError = fetchError.message.includes('CORS') || 
+                                       (fetchError.name === 'TypeError' && fetchError.message.includes('Failed to fetch'));
+                    
+                    let errorDetails = '';
+                    if (isCorsError) {
+                        errorDetails = `
+                            <strong>❌ CORS Error:</strong><br>
+                            <strong>The API server is not allowing requests from this origin.</strong><br><br>
+                            <strong>Details:</strong><br>
+                            • URL: <code>${fullUrl}</code><br>
+                            • Origin: <code>${window.location.origin}</code><br>
+                            • Error: ${fetchError.message}<br><br>
+                            <strong>Possible causes:</strong><br>
+                            • Backend CORS is not configured correctly<br>
+                            • Service is not deployed or offline<br>
+                            • Wrong API URL (might be pointing to project page instead of service)<br><br>
+                            <strong>Note:</strong> If your backend is deployed, make sure CORS allows your GitHub Pages domain.<br>
+                        `;
+                    } else {
+                        errorDetails = `
+                            <strong>❌ Connection Error:</strong><br>
+                            <strong>Cannot connect to the API server</strong><br><br>
+                            <strong>Details:</strong><br>
+                            • URL: <code>${fullUrl}</code><br>
+                            • Error: ${fetchError.message}<br><br>
+                            <strong>Possible causes:</strong><br>
+                            • Railway service is not deployed yet<br>
+                            • Service is offline or crashed<br>
+                            • Network connectivity problem<br>
+                            • Wrong API URL<br><br>
+                            <strong>Next steps:</strong><br>
+                            1. Check Railway dashboard - is the service deployed?<br>
+                            2. Check service logs in Railway<br>
+                            3. Verify the API URL in config.js is the service URL (not project URL)<br>
+                            4. Service URL should be like: <code>https://your-service-name.railway.app</code><br>
+                        `;
+                    }
+                    
+                    responseDiv.className = 'error';
+                    responseDiv.innerHTML = errorDetails;
+                    console.error('Fetch error:', fetchError);
+                    return;
+                }
+                
+                console.log('Response status:', response.status, response.statusText);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    responseDiv.className = 'success';
+                    responseDiv.innerHTML = '<strong>✅ Success!</strong><br>Backend API is working. Received ' + data.length + ' test projects.';
+                } else {
+                    // HTTP error response
+                    let errorText = '';
+                    try {
+                        errorText = await response.text();
+                    } catch (e) {
+                        errorText = 'Could not read error response';
+                    }
+                    
+                    responseDiv.className = 'error';
+                    responseDiv.innerHTML = `
+                        <strong>❌ API Error:</strong><br>
+                        <strong>HTTP Status: ${response.status} ${response.statusText}</strong><br><br>
+                        <strong>URL:</strong> <code>${fullUrl}</code><br>
+                        <strong>Response:</strong> <pre>${errorText.substring(0, 200)}</pre>
+                    `;
+                    console.error('API error:', response.status, errorText);
+                }
+            } catch (error) {
+                responseDiv.className = 'error';
+                responseDiv.innerHTML = `
+                    <strong>❌ Unexpected Error:</strong><br>
+                    <strong>${error.name || 'Error'}:</strong> ${error.message}<br><br>
+                    <strong>Stack trace:</strong><br>
+                    <pre style="font-size: 10px; max-height: 200px; overflow: auto;">${error.stack || 'No stack trace available'}</pre>
+                `;
+                console.error('Unexpected error:', error);
+            } finally {
+                button.disabled = false;
+                button.textContent = 'Click Me';
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</body>
+</html>
