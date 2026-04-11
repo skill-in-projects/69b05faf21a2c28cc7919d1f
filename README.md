@@ -13,4 +13,4 @@
 - `index.html` - Main landing page
 - `config.js` - API configuration
 - `style.css` - Styling
-
+cxcx
