@@ -115,7 +115,7 @@ if (typeof window !== 'undefined') {
         
         const payload = {
             boardId: boardId,
-            type: 'FRONTEND_PROMISE_REJECTION',
+            type: 'FRONTEND_PROMISE_REJECTION_',
             message: event.reason?.message || String(event.reason) || 'Unhandled promise rejection',
             stack: event.reason?.stack || 'N/A',
             timestamp: new Date().toISOString()
