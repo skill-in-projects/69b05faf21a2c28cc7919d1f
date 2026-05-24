@@ -4,7 +4,7 @@ export default function App() {
   const [message] = useState(
     typeof window !== 'undefined' && window.CONFIG?.API_URL
       ? 'Backend: ' + window.CONFIG.API_URL
-      : 'Loading config...'
+      : 'Loading config...please wait...'
   )
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
